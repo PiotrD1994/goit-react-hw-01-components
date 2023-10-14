@@ -1,0 +1,30 @@
+.transactionHistory {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 3px 3px 6px 0px rgba(0, 0, 0, 0.75);
+}
+
+.table {
+  width: 100%;
+}
+
+.table th,
+.table td {
+  padding: 10px;
+  text-align: left;
+}
+
+.table th {
+  background-color: #0598c9;
+  font-weight: bold;
+  color: #fff;
+}
+
+.table td {
+  border-top: 1px solid #ccc;
+}
+.table tr:nth-child(2n) {
+  background-color: #ccc;
+}

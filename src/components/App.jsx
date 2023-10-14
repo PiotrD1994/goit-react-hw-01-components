@@ -2,6 +2,7 @@ import FriendList from "./FriendList";
 import Profile from "./Profile";
 import Statistics from "./Statistics";
 import TransactionHistory from "./TransactionHistory";
+import css from "./Container.module.css"
 
 export const App = () => {
   const userData = {
@@ -181,16 +182,8 @@ const transactionData = [
 ]
 
 return (
-    <div
-      style={{
-        height: '100vh',
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-        fontSize: 40,
-        color: '#010101',
-      }}
-    >
+    <div>
+ <section className={css.container}>
        <Profile
         username={userData.username}
         tag={userData.tag}
@@ -198,13 +191,17 @@ return (
         avatar={userData.avatar}
         stats={userData.stats}
       />
+      </section>
 
-
-         <Statistics title='Upload stats' stats={statsData}/>
+      <section className={css.container}>
+      <Statistics title='Upload stats' stats={statsData}/>
+      </section>
+      <section className={css.container}>
       <FriendList friends={friendData}/>
-  
-
+      </section>
+      <section className={css.container}>
       <TransactionHistory items={transactionData}/>
+      </section>
     </div>
   );
 };
